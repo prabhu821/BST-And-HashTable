@@ -9,7 +9,7 @@ public class Program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("\nSelect the operation to perform \n1.Create BST \n2.Display \n3.Exit");
+            Console.WriteLine("\nSelect the operation to perform \n1.Create BST \n2.Display \n3.Size \n4.Exit");
             int options = Convert.ToInt32(Console.ReadLine());
             switch (options)
             {
@@ -24,6 +24,9 @@ public class Program
                     break;
                 case 2:
                     binarySearchTree.Display(binarySearchTree.ReturnRoot());
+                    break;
+                case 3:
+                    Console.WriteLine("The size of binary tree is : " + binarySearchTree.size());
                     break;
                 default:
                     flag = false;
