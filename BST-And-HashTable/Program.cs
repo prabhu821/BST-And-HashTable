@@ -1,10 +1,34 @@
-﻿namespace BST_And_HashTable
+﻿namespace BST_And_HashTable;
+
+public class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        Console.WriteLine("BST-and-Hash Table!");
+        BinarySearchTree binarySearchTree = new BinarySearchTree();
+        bool flag = true;
+        while (flag)
         {
-            Console.WriteLine("BST-and-Hash Table!");
+            Console.WriteLine("\nSelect the operation to perform \n1.Create BST \n2.Display \n3.Exit");
+            int options = Convert.ToInt32(Console.ReadLine());
+            switch (options)
+            {
+                case 1:
+                    binarySearchTree.Insert(56);
+                    binarySearchTree.Insert(30);
+                    binarySearchTree.Insert(70);
+                    binarySearchTree.Insert(45);
+                    binarySearchTree.Insert(34);
+                    binarySearchTree.Insert(87);
+                    Console.WriteLine("Tree Created");
+                    break;
+                case 2:
+                    binarySearchTree.Display(binarySearchTree.ReturnRoot());
+                    break;
+                default:
+                    flag = false;
+                    break;
+            }
         }
     }
 }
