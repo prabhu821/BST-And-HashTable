@@ -12,7 +12,7 @@ public class Program
         while (flag)
         {
             Console.WriteLine("\nSelect the operation to perform \n1.Create BST \n2.Display \n3.Size \n4.Create Hash Table " +
-                "\n5.Hash Table for Paragragh \n6.Exit");
+                "\n5.Hash Table for Paragragh \n6.Remove Hash value \n7.Exit");
             int options = Convert.ToInt32(Console.ReadLine());
             switch (options)
             {
@@ -109,6 +109,10 @@ public class Program
                     Console.WriteLine("16th index value: " + para16);
                     Console.WriteLine("17th index value: " + para17);
                     Console.WriteLine("18th index value: " + para18);
+                    break;
+                case 6:
+                    para.Remove("17", "avoidable");
+                    Console.WriteLine("Value Deleted");
                     break;
                 default:
                     flag = false;
